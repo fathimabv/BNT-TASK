@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+< lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Advanced HTML5 Website" />
+  <title>Assessment-I</title>
+  <link rel="icon" href="./icon.png">
+  </head><style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header, nav, footer, section, article, aside {
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+    header {
+      background: #333;
+      color: white;
+    }
+    nav {
+      background: #444;
+      color: white;
+    }
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    article {
+      flex: 3;
+      background: rgba(188, 178, 178, 0.269);
+    }
+    aside {
+      flex: 1;
+      background: #e0e0e0;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+    }
+    video, audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+    form input, form textarea, form select {
+      display: block;
+      margin: 10px 0;
+      width: 100%;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Advanced HTML5 Website</h1>
+    <p>Using Semantic Elements, Forms, Media, and APIs</p>
+  </header>
+<br>
+  <nav>
+    <ul style="list-style: none; display: flex; gap: 20px; padding: 0;">
+            <li><a href="https://www.w3schools.com/html/default.asp" style="color: rgb(241, 235, 235);">HTML</a></li>
+            <li><a href="https://www.w3schools.com/css/default.asp" style="color: rgb(234, 232, 232);">CSS</a></li>
+            <li><a href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp" style="color: rgb(240, 238, 238);">BOOTSTRAP</a></li>
+            <li><a href="https://www.w3schools.com/js/default.asp" style="color: rgb(224, 218, 218);">JavaScript</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <article>
+      <section id="home">
+        <h2>Welcome to HTML5</h2>
+        <p>This website demonstrates the power of HTML5 advanced features.</p>
+        <canvas id="myCanvas" width="300" height="150" style="border:1px solid #000;"></canvas>
+      </section>
+
+      <section id="media">
+        <h3>Multimedia</h3>
+        <video controls>
+          <source src="sample.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <audio controls>
+          <source src="sample.mp3" type="audio/mp3" />
+          Your browser does not support the audio element.
+        </audio>
+      </section>
+
+      <section id="form">
+        <h3>Contact Form</h3>
+        <form autocomplete="on">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" />
+
+          <label for="color">Favorite Color:</label>
+          <input type="color" id="color" name="color" />
+
+          <label for="range">Satisfaction (1-10):</label>
+          <input type="range" id="range" name="range" min="1" max="10" />
+
+          <label for="bio">Short Bio:</label>
+          <textarea id="bio" name="bio"></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </article>
+
+    <aside>
+      <h3>News</h3>
+      <p>This is a sample <aside>Sidebar - ZD Blog - ZillionDesignsNewspaper sidebars are short, standalone pieces of content that appear alongside a main article, offering additional information, context, or a related story. They can be used for various purposes, including providing deeper insights, showcasing related data, highlighting human interest stories, or offering alternative perspectives</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>@ 2025 Advanced HTML5 Site. All rights reserved.</p>
+  </footer>
+</body>
+</html>

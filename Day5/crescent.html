@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crescent Education - Modern Clone</title>
+  <link rel="icon" href="./cres.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, #002244, #003366);
+      color: white;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      color: #092058;
+    }
+    
+    .container p:hover,
+    .container h2:hover,
+    .container h3:hover {
+       color: goldenrod; 
+       transition: color 0.3s ease;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav a:hover {
+      color: #00bcd4;
+    }
+
+    .hero {
+      background-color: rgba(14, 84, 205, 0.219);
+      color: white;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h2 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #002244;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .btn {
+      background: #00bcd4;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1em;
+      text-decoration: none;
+      transition:background 0.3s;
+    }
+
+    .btn:hover {
+      background: #0097a7;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .courses {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      background: #002244;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    
+    /* Logo and text styling */
+    .nav h1 a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+      border-radius: 50%;
+    }
+
+    .nav h1:hover a {
+      color: #00bcd4;
+    }
+
+    .logo {
+      height: 40px;
+      width: auto;
+      border-radius: 50%; 
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <h1>
+        <a href="#">
+          <img src="cres.png" alt="Crescent Logo" class="logo">
+          <span>Crescent</span>
+        </a>
+      </h1>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Shaping Tomorrow's Leaders</h2>
+      <p>Join B.S Abdur Rahman Crescent Institute of Science and Technology to explore, innovate, and lead.</p>
+      <a href="#courses" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Crescent</h2>
+      <p>Crescent is a leading institution offering top-tier education in engineering, science, business, and technology. Our campus is a hub for innovation and leadership.</p>
+    </div>
+  </section>
+
+  <section id="courses">
+    <div class="container">
+      <h2>Popular Courses</h2>
+      <div class="courses">
+        <div class="card">
+          <h3>B.Tech Computer Science</h3>
+          <p>Learn programming, AI, machine learning, and full-stack development.</p>
+        </div>
+        <div class="card">
+          <h3>B.Tech Mechanical</h3>
+          <p>Build your future with core mechanical engineering principles.</p>
+        </div>
+        <div class="card">
+          <h3>MBA</h3>
+          <p>Strategic leadership and management skills for global careers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Email: info@crescent.education</p>
+      <p>Phone: +91-44-2275-1347</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Crescent Education. Designed with ❤️ by Students.</p>
+  </footer>
+
+</body>
+</html>
