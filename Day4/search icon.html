@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search bar Icon</title>
+  <link rel="icon" href="./icon.jpeg">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #6b12751e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .search-container {
+      position: relative;
+      width: 300px;
+    }
+
+    .search-container input[type="text"] {
+      width: 100%;
+      padding: 10px 15px 10px 40px; 
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      transition: background-color 0.3s, border-color 0.3s;
+
+    }
+    .search-container input[type="text"]::placeholder {
+      color: #74108963;
+      opacity: 1; 
+    }
+
+    .search-container input[type="text"]:hover {
+      background-color: #33a9b82c;
+      border-color: #00acc1;      
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      pointer-events: none;
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #c30f4ba8;
+      margin-bottom: 20px;
+      padding: 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1><b>SEARCH ICON</b></h1>
+
+  <div class="search-container">
+    <form class="search-container" action="https://www.google.com/search" method="GET" target="_blank">
+    <img src="icon.jpeg" alt="Search Icon" class="search-icon">
+    <input type="text" placeholder="Search here...">
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Boxes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #222;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;/
+    }
+
+    h1 {
+      text-align: center;
+      padding: 15px 0;
+      font-weight: normal;
+    }
+
+    .scroll-area {
+      flex: 1;
+      display: flex;           
+      justify-content: center; 
+      align-items: center;     
+      overflow: auto;
+      padding: 15px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 150px);
+      grid-auto-rows: 150px;
+      gap: 15px;
+      justify-content: center; 
+    }
+
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      border-radius: 12px;
+      color: #fff;
+      font-weight: 600;
+      user-select: none;
+      cursor: default;
+      transition: transform 0.25s;
+    }
+    .box:hover {
+      transform: scale(1.05);
+    }
+    
+    .box:nth-child(1) { background: #FF6B6B; }  
+    .box:nth-child(2) { background: #4ECDC4; }  
+    .box:nth-child(3) { background: #FFD93D; } 
+    .box:nth-child(4) { background: #6A4C93; }  
+    .box:nth-child(5) { background: #1A535C; } 
+    .box:nth-child(6) { background: #FF9F1C; }  
+
+  </style>
+</head>
+<body>
+
+  <h1>Responsive Boxes</h1>
+
+  <div class="scroll-area">
+    <div class="grid">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+      <div class="box">Box 4</div>
+      <div class="box">Box 5</div>
+      <div class="box">Box 6</div>
+    </div>
+  </div>
+
+</body>
+</html>

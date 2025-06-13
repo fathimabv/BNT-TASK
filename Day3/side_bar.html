@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sidebar and Navbar</title>
+  <style>
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    .topnav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background-color: #333;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .topnav h1 {
+      font-size: 20px;
+      user-select: none;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 50px;
+      left: 0;
+      width: 220px;
+      height: calc(100vh - 50px);
+      background-color: #111;
+      padding-top: 20px;
+      overflow-y: auto;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 15px 20px;
+      color: #ccc;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .sidebar a:hover {
+      background-color: #575757;
+      color: white;
+    }
+
+    .main-content {
+      margin-left: 220px;
+      margin-top: 50px;
+      padding: 20px;
+      min-height: calc(100vh - 50px);
+      background-color: #f9f9f9;
+    }
+
+    
+    @media screen and (max-width: 600px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      .sidebar a {
+        float: left;
+      }
+      .main-content {
+        margin-left: 0;
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topnav">
+    <h1>My Website</h1>
+  </div>
+
+  <div class="sidebar">
+      <a href="http://127.0.0.1:5500/Input%20Forms.html">Dashboard</a>
+      <a href="http://127.0.0.1:5500/index.html">Profile</a>
+      <a href="https://support.google.com">Settings</a>
+      <a href="https://github.com/topics/login">Logout</a>
+  </div>
+
+  <div class="main-content">
+    <h2>Welcome to the Dashboard</h2>
+    <p>This is your main content area. The sidebar is fixed on the left and the navigation bar is fixed on the top. Resize the window to see the responsive effect.</p>
+  </div>
+
+</body>
+</html>

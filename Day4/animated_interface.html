@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Interface Demo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      overflow-x: hidden;
+    }
+
+    /* Slide-in Menu */
+    .menu {
+      position: fixed;
+      left: -200px;
+      top: 0;
+      width: 200px;
+      height: 100%;
+      background: #333;
+      color: white;
+      padding: 20px;
+      transition: left 0.4s ease;
+      z-index: 100;
+    }
+
+    .menu:hover {
+      left: 0;
+    }
+
+    .menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu li {
+      margin: 20px 0;
+    }
+
+    /* Loader Spinner */
+    .loader {
+      width: 50px;
+      height: 50px;
+      border: 6px solid #ccc;
+      border-top: 6px solid #6a11cb;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 60px auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    } 
+
+    /* Typing Effect */
+    .typing {
+      font-family: monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #000;
+      width: 0;
+      animation: typing 4s steps(20) forwards, blink 0.75s step-end infinite;
+      margin: 40px auto;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    @keyframes typing {
+      to {
+        width: 16ch;
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    /* Fade-in Section */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 0.5s;
+      transform: translateY(30px);
+      text-align: center;
+      font-size: 20px;
+      margin: 60px auto;
+      max-width: 600px;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Button Animation */
+    .button {
+      padding: 12px 30px;
+      background: linear-gradient(to right, #2575fc, #6a11cb);
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      display: block;
+      margin: 40px auto;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Slide-in Side Menu -->
+  <div class="menu">
+    <h3>Menu</h3>
+    <ul>
+      <li>🏠 Home</li>
+      <li>ℹ️ About</li>
+      <li>💼 Services</li>
+      <li>📞 Contact</li>
+    </ul>
+  </div>
+
+  <!-- Loader Spinner -->
+  <div class="loader"></div>
+
+  <!-- Typing Effect -->
+  <div class="typing">CSS is Powerful!</div>
+
+  <!-- Fade In Content -->
+  <div class="fade-in">
+    Welcome to the animated interface demo. This section smoothly fades into view!
+  </div>
+
+  <!-- Hover Button -->
+  <button class="button">Hover Me</button>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Zoom Pseudo Element</title>
+<style>
+
+ .image-container {
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  height: 200px;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(234, 200, 30, 0.594);
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    align-items: center;
+  }
+
+  .image-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 110%;
+    height: 110%;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.5s ease;
+    pointer-events: none; 
+    align-items: center;
+    z-index: 1;
+  }
+
+  .image-container:hover img {
+    transform: scale(1.2); 
+  }
+
+  .image-container:hover::before {
+    transform: translate(-50%, -50%) scale(1.1); 
+  }
+
+  .image-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 110%;
+    height: 110%;
+    background: rgba(255, 217, 0, 0.486);
+    border-radius: 12px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.5s ease;
+    pointer-events: none; 
+    align-items: center;
+    z-index: 1;
+  }
+
+  .image-container:hover img {
+    transform: scale(1.2); 
+
+  }
+
+  .image-container:hover::after {
+    transform: translate(50%, 50%) scale(1.2); 
+  }
+
+</style>
+</head>
+<body>
+
+<div class="image-container">
+  <img src="icon.jpg" alt="panda Image"/>
+</div>
+
+</body>
+</html>

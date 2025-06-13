@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Card Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eee9e9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin: 15px;
+      width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-20px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .card p {
+      color: #220303;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    .card button {
+      background-color: #7761b3;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    .card button:hover {
+      background-color: #1958b6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Card Title</h2>
+    <p>
+      Simple card layout with padding, margin, background color, border, rounded corners, shadow, and hover effects. It’s clean and elegant for presenting content.
+    </p>
+    <button>Read More</button>
+  </div>
+
+</body>
+</html>

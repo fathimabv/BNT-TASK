@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nav Menu with Link States</title>
+  <style>
+    nav {
+      background-color: #0a2003;
+      overflow: hidden;
+    }
+
+    nav a {
+      display: inline-block; 
+      padding: 14px 20px;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      transition: 0.3s ease;
+    }
+
+    nav a:link {
+      color: #9eb135; 
+    }
+
+    nav a:visited {
+      color: rgb(228, 225, 225);
+    }
+
+    nav a:hover {
+      background-color: #054907; 
+      color: yellow; 
+    }
+
+    nav a:active {
+      color: cyan; 
+    }
+
+    h2 {
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+    <h2>Horizontal Nav Menu</h2>
+
+  <nav>
+    <a href="https://www.google.com" target="_blank">Home</a>
+    <a href="https://www.wikipedia.org" target="_blank">About</a>
+    <a href="https://www.w3schools.com" target="_blank">Learn</a>
+    <a href="https://www.github.com" target="_blank">Projects</a>
+    <a href="https://www.youtube.com" target="_blank">Contact</a>
+  </nav>
+
+</body>
+</html>

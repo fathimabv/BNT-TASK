@@ -1,0 +1,16 @@
+ body {
+      background-color: #ddb5a4;
+      font-family: Arial, sans-serif;
+    }
+
+    .info {
+      color: green;
+      font-size: 18px;
+    }
+
+    #highlight {
+      color: white;
+      background-color: rgb(80, 150, 117);
+      padding: 10px;
+      border-radius: 5px;
+    }
