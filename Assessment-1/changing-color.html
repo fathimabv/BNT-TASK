@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AnimatedChanging Circle</title>
+
+  <style>
+    
+    .circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 70%;
+      background-color: rgba(16, 122, 215, 0.973);
+      animation: colorChange 8s linear infinite;
+      margin: 50px auto;
+    }
+
+    @keyframes colorChange {
+      0%   { background-color: rgba(0, 155, 148, 0.598); }
+      25%  { background-color: rgba(230, 230, 15, 0.61); }
+      50%  { background-color: rgba(180, 5, 54, 0.466); }
+      75%  { background-color: rgba(85, 150, 85, 0.441); }
+      100% { background-color: red; }
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center;">Animated Color-Changing Circle</h2>
+  <div class="circle"></div>
+</body>
+</html>

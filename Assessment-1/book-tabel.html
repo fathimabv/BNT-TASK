@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Table</title>
+  <style>
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #000;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <table>
+    <tr>
+      <th colspan="4">Book Information</th>
+    </tr>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Publication Date</th>
+      <th>Pages</th>
+    </tr>
+    <tr>
+      <td>BOOK1</td>
+      <td rowspan="2">Author1</td>
+      <td>1988</td>
+      <td>208</td>
+    </tr>
+    <tr>
+      <td>Brida</td>
+      <td>1990</td>
+      <td>224</td>
+    </tr>
+    <tr>
+      <td>BOOK2</td>
+      <td>AUTHOR2</td>
+      <td>1949</td>
+      <td>328</td>
+    </tr>
+    <tr>
+      <td>BOOK3</td>
+      <td>Harper Lee</td>
+      <td>1960</td>
+      <td>281</td>
+    </tr>
+  </table>
+
+</body>
+</html>
