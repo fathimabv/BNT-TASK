@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cafe World | Portfolio Style</title>
+  <link rel="icon" href="./coffee and Croissant.jpg">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffaf0;
+      color: #333;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+      font-weight: 400;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    nav {
+      background-color: #6f4e37;
+      text-align: center;
+      padding: 12px 0;
+    }
+
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      font-weight: 500;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .container {
+      padding: 40px 50px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2, h3 {
+      color: #6f4e37;
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin-top: 30px;
+    }
+
+    p, li, dd {
+      font-size: 17px;
+      line-height: 1.6;
+      font-weight: 400;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    ul, ol, dl {
+      margin-left: 40px;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 10px;
+      font-size: 16px;
+      color: #6f4e37;
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #6f4e37;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 14px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 32px;
+      }
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+      .container {
+        padding: 20px;
+      }
+    }
+
+    body {
+  background-image: url('cfs bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Cafe World</h1>
+    <p>Your Cozy Coffee Spot</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#specials">Specials</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="about">
+      <h2>About Cafe World</h2>
+      <p>Welcome to <span style="color:darkolivegreen;font-weight:bold">Cafe World</span>– where every sip tells a story. Nestled in the heart of the city, our café blends tradition with a modern twist to serve you the finest brews and bites.</p>
+    </section>
+
+    <section id="menu">
+      <h2>Our Menu</h2>
+
+      <h3>Beverages (Unordered List)</h3>
+      <ul>
+        <li>Espresso</li>
+        <li>Latte</li>
+        <li>Cappuccino</li>
+        <li>Hot Chocolate</li>
+      </ul>
+
+      <h3>Breakfast Items (Ordered List)</h3>
+      <ol start = "7">
+        <li>Avocado Toast</li>
+        <li>Waffles</li>
+        <li value="11">Omelette</li>
+        <li>Fruit Bowl</li>
+      </ol>
+
+      <h3>Popular Items (Description List)</h3>
+      <dl>
+        <dt>Mocha</dt>
+        <dd>A rich blend of coffee and chocolate.</dd>
+        <dt>Blueberry Muffin</dt>
+        <dd>Freshly baked with real blueberries.</dd>
+        <dt>Cold Brew</dt>
+        <dd>Slow-steeped for a smooth taste.</dd>
+      </dl>
+    </section>
+
+    <section id="specials">
+      <h2>Today's Special</h2>
+      <img src="icecoffee.jpg" alt="Vanilla Cream Latte" width="400" height="300">
+      <p>Try our <strong>Vanilla Cream Latte</strong> topped with whipped cream and a sprinkle of cinnamon!</p>
+    </section>
+
+    <section id="gallery">
+      <h2>Our Gallery</h2>
+      <div class="gallery">
+        <img src="Cafe Interior.jpg" alt="Cafe Interior">
+        <img src="coffee and Croissant.jpg" alt="Coffee & Croissant">
+        <img src="cafe vibes.jpg" alt="Cafe Vibes">
+      </div>
+    </section>
+    <section id="contact" class="links">
+      <h2>Contact & Links</h2>
+      <p>
+        <a class="absolute" href="https://www.cafeworld.com" target="_blank">Visit Our Official Website</a><br>
+        <a class="relative" href="menu.html">See Full Menu (Relative Link)</a>
+      </p>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Cafe World | Built with COFFEE and LOVE by Fathima
+  </footer>
+
+</body>
+</html>
