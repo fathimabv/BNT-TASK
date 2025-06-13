@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background-image: linear-gradient(to right, rgba(158, 57, 87, 0) rgb(115, 67, 134));
+      padding: 40px;
+    }
+    
+    h2 {
+      text-align: center;
+      color: #490735;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      padding: 30px;
+      background: #bdafbe;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #81144b;
+    }
+
+    
+    input[type="text"],
+    input[type="date"],
+    input[type="month"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="week"],
+    input[type="search"],
+    input[type="url"],
+    input[type="password"],
+    input[type="file"],
+    input[type="color"],
+    input[type="range"],
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #000000;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      background-color: #750744;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #750744;
+    }
+
+    button[type="reset"] {
+      background-color: #6e3e59;
+    }
+
+    button[type="reset"]:hover {
+      background-color: #9e274b;
+    }
+    </style>
+</head>
+<body>
+  <h2>Student Registration Form</h2>
+
+  <form action="/submit" method="post" enctype="multipart/form-data">
+    
+    <div class="form-group">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="student_name" placeholder="Enter full name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+    </div>
+
+    <div class="form-group">
+      <label for="admission_month">Admission Month:</label>
+      <input type="month" id="admission_month" name="admission_month">
+    </div>
+
+    <div class="form-group">
+      <label for="passing_year">Year of Passing:</label>
+      <input type="number" id="passing_year" name="passing_year" min="2000" max="2099">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email ID:</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Mobile Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="1234567890" pattern="[0-9]{10}" required>
+    </div>
+
+    <div class="form-group">
+      <label for="time">Preferred Contact Time:</label>
+      <input type="time" id="time" name="contact_time">
+    </div>
+
+    <div class="form-group">
+      <label for="week">Week of Joining:</label>
+      <input type="week" id="week" name="join_week">
+    </div>
+
+    <div class="form-group">
+      <label for="search">Search Your Course:</label>
+      <input type="search" id="search" name="search_course">
+    </div>
+
+    <div class="form-group">
+      <label for="website">Your Website/Portfolio:</label>
+      <input type="url" id="website" name="website" placeholder="https://example.com">
+    </div>
+
+    <div class="form-group">
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="Male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="Female">
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="Other">
+      <label for="other">Other</label>
+    </div>
+
+    <div class="form-group">
+      <label>Skills:</label>
+      <input type="checkbox" name="skills" value="HTML"> HTML
+      <input type="checkbox" name="skills" value="CSS"> CSS
+      <input type="checkbox" name="skills" value="JavaScript"> JavaScript
+    </div>
+
+    <div class="form-group">
+      <label for="favcolor">Favorite Color:</label>
+      <input type="color" id="favcolor" name="favcolor">
+    </div>
+
+    <div class="form-group">
+      <label for="experience">Experience Level (0-10):</label>
+      <input type="range" id="experience" name="experience" min="0" max="10">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Create Password:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+
+    <div class="form-group">
+      <label for="resume">Upload Resume:</label>
+      <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+    </div>
+
+    <input type="hidden" name="user_role" value="student">
+
+    <div class="btn-group">
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </div>
+
+  </form>
+
+</body>
+</html>

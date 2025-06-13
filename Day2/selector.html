@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Select Tags</title>
+  <style>
+
+    /* Universal Selector */
+    * {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+    }
+
+    /* Element Selector */
+    h2 {
+      color: darkblue;
+      text-decoration: underline;
+    }
+
+    /* Class Selector */
+    .highlight {
+      color: rgb(7, 100, 38);
+      font-weight: bold;
+    }
+
+    /* ID Selector */
+    #unique {
+      color: purple;
+      background-color: rgb(241, 190, 216);
+      padding: 5px;
+      border: 2px solid purple;
+    }
+
+    /* Styling the select tag (element selector) */
+    select {
+      background-color: #f0f8ff;
+      border: 2px solid #007BFF;
+      padding: 8px 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Select Tags</h2>
+
+  <p>This paragraph is normal but styled by the universal selector.</p>
+
+  <p class="highlight">This paragraph uses the class selector (.highlight).</p>
+
+  <p id="unique">This paragraph uses the ID selector (#unique).</p>
+
+  <div class="highlight" id="unique">This div has both class and ID selectors applied.</div>
+
+  <label for="fruits">Choose a fruit:</label>
+  <select id="fruits" name="fruits">
+    <option value="apple">Apple</option>
+    <option value="banana">Banana</option>
+    <option value="orange">Orange</option>
+  </select>
+  
+</body>
+</html>
