@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SilentHands | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');
+      background-size: cover;
+      background-position: center;
+      color: #ffffff;
+      transition: background 0.5s ease;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav img.logo {
+      height: 50px;
+      border-radius: 30px;
+      transition: transform 0.4s ease;
+    }
+
+    nav img.logo:hover {
+      transform: scale(1.1);
+    }
+
+    nav .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #f9a825;
+      margin-left: 0.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #f9a825;
+      transition: width 0.3s ease-in-out;
+    }
+
+    nav ul li a:hover {
+      color: #f9a825;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      backdrop-filter: brightness(0.6);
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      color: #ffffff;
+      animation: fadeZoom 1.5s ease-in-out;
+      position: relative;
+    }
+
+    .hero h1::before {
+      content: "✨ ";
+      color: #fdd835;
+      position: absolute;
+      left: -2rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-top: 1rem;
+      transition: transform 0.4s ease;
+    }
+
+    .hero p:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeZoom {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .section {
+      padding: 5rem 2rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.6);
+      margin: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, background 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .section::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      top: 0;
+      left: 0;
+      background: linear-gradient(to right, #f9a825, #fff176, #fbc02d);
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: #fff176;
+      margin-bottom: 1rem;
+    }
+
+    .section pre {
+      font-size: 1rem;
+      white-space: pre-wrap;
+      color: #f5f5f5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.8);
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    footer:hover {
+      background: rgba(0, 0, 0, 0.95);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <img src="logo.png" alt="Logo" class="logo" />
+    <div class="logo">SilentHands</div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="shops.html">Shop</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <h1 data-aos="fade-up">Welcome to SilentHands</h1>
+    <p data-aos="fade-up" data-aos-delay="300">Discover peace-driven products, find quiet jobs, and be part of a serene community focused on mindful creation.</p>
+  </div>
+
+  <div class="section" data-aos="zoom-in-up">
+    <h2>What We Do</h2>
+    <pre>
+At SilentHands, we empower individuals who seek peaceful, meaningful work and celebrate handmade craftsmanship.
+
+Whether you're a job seeker looking for calm, remote opportunities or a maker showcasing unique handmade products, we provide the perfect platform to connect, grow, and thrive in a distraction-free environment.
+    </pre>
+  </div>
+
+  <div class="section" data-aos="fade-up">
+    <h2>Our Mission</h2>
+    <pre>
+🌿 Create a peaceful platform for calm, focused work.
+🧵 Support and promote handmade, heart-crafted products.
+💻 Connect remote job seekers with silent, distraction-free roles.
+🧘‍♀️ Encourage a stress-free, meaningful work environment.
+🤝 Build a supportive community of makers and doers.
+🚀 Empower individuals to grow through passion and purpose.
+    </pre>
+  </div>
+
+  <footer>
+    &copy; 2025 SilentHands. All rights reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
+</body>
+</html>

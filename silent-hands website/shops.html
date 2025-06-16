@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop | SilentHands</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #f9f9f9);
+      color: #333;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 40px;
+      width: auto;
+      margin-right: 10px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.1);
+    }
+
+    .brand-name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2b3e50;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #0eb3d4;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .nav-links li a:hover {
+      color: #297bc7;
+    }
+
+    .nav-links li a:hover::after {
+      width: 100%;
+    }
+
+    .shop-header {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+    }
+
+    .shop-header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #2e3a59;
+    }
+
+    .shop-header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    .shop-grid {
+      padding: 2rem;
+    }
+
+    .item-card {
+      background: white;
+      border-radius: 15px;
+      padding: 1rem;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .item-card:hover {
+      transform: scale(1.05);
+      background-color: #f065e627;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    }
+
+    .item-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      transition: filter 0.3s ease;
+    }
+
+    .item-card:hover img {
+      filter: brightness(1.1);
+    }
+
+    .item-card h5 {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #2b2b2b;
+      margin: 0.5rem 0;
+      min-height: 40px;
+    }
+
+    .item-card p {
+      font-size: 0.9rem;
+      color: #666;
+      min-height: 45px;
+    }
+
+    .price {
+      color: #27ae60;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="brand">
+      <img src="logo.png" alt="Logo" class="logo" />
+      <span class="brand-name">SilentHands</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="shops.html">Shop</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="shop-header" data-aos="fade-down">
+    <h1>Explore Our Unique Collections</h1>
+    <p>Each item is crafted with care, intention, and love.</p>
+  </section>
+
+  <section class="shop-grid container">
+    <div class="row g-4">
+      <script>
+        const products = [
+          { name: "Bamboo Table Lamp", desc: "Handwoven bamboo shade with warm light.", img: "bamboo-lamp.jpeg" },
+          { name: "Clay Water Pot", desc: "Keeps water naturally cool and fresh.", img: "clay-pot.jpeg" },
+          { name: "Jute Wall Hanging", desc: "Sustainable decor for earthy homes.", img: "jute-wall.jpg" },
+          { name: "Terracotta Vase", desc: "Rustic charm, perfect for dry flowers.", img: "vase.jpeg" },
+          { name: "Hand-stitched Diary", desc: "Eco-paper with fabric binding.", img: "diary.jpeg" },
+          { name: "Coconut Shell Bowl", desc: "Nature-inspired breakfast bowl.", img: "coconut-bowl.jpeg" },
+          { name: "Woolen Coasters Set", desc: "Soft, hand-knitted coaster set.", img: "coasters.jpeg" },
+          { name: "Palm Leaf Basket", desc: "Minimal, strong, and versatile.", img: "basket.jpeg" },
+          { name: "Reclaimed Wood Frame", desc: "Made from upcycled vintage wood.", img: "frame.jpeg" },
+          { name: "Brass Incense Holder", desc: "Traditional with a modern twist.", img: "incense-holder.jpg" },
+          { name: "Stone Soap Dish", desc: "Natural carved look for your bath.", img: "soap-dish.jpeg" },
+          { name: "Macrame Plant Hanger", desc: "Soft cotton rope for your greens.", img: "macrame.jpg" },
+          { name: "Hand-carved Spoon Set", desc: "Crafted from neem wood.", img: "spoons.jpg" },
+          { name: "Patchwork Cushion Cover", desc: "Colorful, handmade fabric patch.", img: "cushion.jpg" },
+          { name: "Aromatic Candle Jar", desc: "Soy wax with lavender fragrance.", img: "candles.jpeg" },
+          { name: "Upcycled Canvas Tote", desc: "Fashion meets sustainability.", img: "tote.jpg" },
+          { name: "Wicker Storage Box", desc: "Organize naturally and neatly.", img: "storage-box.jpeg" },
+          { name: "Ceramic Tea Set", desc: "Hand-glazed with floral patterns.", img: "tea-set.jpg" },
+          { name: "Knitted Wool Scarf", desc: "Warmth woven into every thread.", img: "scarf.jpeg" },
+          { name: "Embroidered Wall Art", desc: "Detailed thread designs on cotton.", img: "wall-art.jpg" }
+        ];
+
+        const items = products.map((product, i) => `
+          <div class='col-sm-6 col-md-4 col-lg-3 d-flex' data-aos='fade-up'>
+            <div class='item-card w-100'>
+              <img src='${product.img}' alt='${product.name}'>
+              <h5>${product.name}</h5>
+              <p>${product.desc}</p>
+              <div class='price'>$${(12 + i * 1.75).toFixed(2)}</div>
+            </div>
+          </div>
+        `);
+
+        document.write(items.join(""));
+      </script>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 SilentHands — Crafted with Calm & Creativity.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+</body>
+</html>

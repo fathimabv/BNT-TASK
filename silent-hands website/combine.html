@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SilentHands | A Calm Digital World</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Navigation */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo {
+      height: 40px;
+      width: auto;
+      margin-right: 10px;
+      border-radius: 30px;
+      transition: transform 0.3s ease;
+    }
+    
+    .logo:hover {
+      transform: scale(1.1);
+    }
+    
+    .brand-name {
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+    }
+    
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .nav-links li a {
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-links li a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #0eb3d4;
+      transition: width 0.3s ease-in-out;
+    }
+    
+    .nav-links li a:hover {
+      color: #297bc7;
+    }
+    
+    .nav-links li a:hover::after {
+      width: 100%;
+    }
+    
+    /* Main Content */
+    main {
+      flex: 1;
+    }
+    
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #ffd194 0%, #70e1f5 100%);
+    }
+    
+    .hero-text {
+      max-width: 600px;
+    }
+    
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #2b2b2b;
+    }
+    
+    .hero-text p {
+      font-size: 1.2rem;
+      color: #4a4a4a;
+    }
+    
+    .hero-img img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    
+    .hero-img img:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Sections */
+    .sections {
+      padding: 4rem 2rem;
+    }
+    
+    .section-box {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+      height: 100%;
+    }
+    
+    .section-box:hover {
+      transform: translateY(-10px);
+    }
+    
+    /* Shop Section */
+    .shop-grid {
+      padding: 2rem;
+    }
+    
+    .item-card {
+      background: white;
+      border-radius: 15px;
+      padding: 1rem;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .item-card:hover {
+      transform: scale(1.05);
+      background-color: #f065e627;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    }
+    
+    .item-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      transition: filter 0.3s ease;
+    }
+    
+    .item-card:hover img {
+      filter: brightness(1.1);
+    }
+    
+    .item-card h5 {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #2b2b2b;
+      margin: 0.5rem 0;
+      min-height: 40px;
+    }
+    
+    .item-card p {
+      font-size: 0.9rem;
+      color: #666;
+      min-height: 45px;
+    }
+    
+    .price {
+      color: #27ae60;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+    
+    /* Jobs Section */
+    .job-card {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    
+    .job-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    }
+    
+    .job-title {
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: #2a2a4e;
+      margin-bottom: 0.5rem;
+    }
+    
+    .job-location {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 1rem;
+    }
+    
+    .job-desc {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+    
+    .apply-btn {
+      background: #6d5dfc;
+      color: #fff;
+      padding: 0.5rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+    
+    .apply-btn:hover {
+      background: #5841e0;
+    }
+    
+    /* About Section */
+    .about-card {
+      background: #fffefc;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border-left: 5px solid #a3c4f3;
+      height: 100%;
+    }
+    
+    .about-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .team-member {
+      margin: 1rem auto;
+      max-width: 300px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    
+    .team-member:hover {
+      transform: scale(1.07);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .team-member img {
+      width: 100%;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1rem;
+    }
+    
+    /* Contact Section */
+    .form-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      max-width: 700px;
+      margin: auto;
+    }
+    
+    .btn-send {
+      background: #6d5dfc;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+    
+    .btn-send:hover {
+      background: #5841e0;
+    }
+    
+    .thank-you {
+      display: none;
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #c6b7ff, #e0d4fd);
+      border-radius: 20px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Page Headers */
+    .page-header {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+    }
+    
+    .page-header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #2b2b2b;
+    }
+    
+    .page-header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+    
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      margin-top: auto;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .hero-text {
+        margin-bottom: 2rem;
+      }
+      
+      .nav-links {
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="brand">
+      <img src="logo.png" alt="Logo" class="logo" />
+      <span class="brand-name"><b>SilentHands</b></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#jobs">Jobs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="hero">
+      <div class="hero-text" data-aos="fade-right">
+        <h1>Welcome to SilentHands</h1>
+        <p>A peaceful platform for handmade goods & silent job seekers.</p>
+      </div>
+      <div class="hero-img" data-aos="fade-left">
+        <img src="heroimg.jpeg" alt="Hero Image">
+      </div>
+    </section>
+
+    <section class="sections container">
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="zoom-in">
+          <div class="section-box">
+            <i class="fas fa-store fa-2x mb-3"></i>
+            <h4>Explore Shop</h4>
+            <p>Discover eco-friendly and artisan-made products.</p>
+            <a href="#shop">Visit Shop</a>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in">
+          <div class="section-box">
+            <i class="fas fa-briefcase fa-2x mb-3"></i>
+            <h4>Silent Jobs</h4>
+            <p>Remote, silent jobs for calm minds and makers.</p>
+            <a href="#jobs">See Jobs</a>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in">
+          <div class="section-box">
+            <i class="fas fa-envelope fa-2x mb-3"></i>
+            <h4>Contact Us</h4>
+            <p>Have a question or want to join? Get in touch!</p>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="page-header">
+      <h1 data-aos="fade-down">About Us</h1>
+      <p data-aos="fade-down" data-aos-delay="100">SilentHands is your sanctuary for peaceful creation and mindful commerce.</p>
+    </section>
+
+    <section class="container about-content">
+      <div class="card-grid row g-4">
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="about-card">
+            <h4>🎯 Our Purpose</h4>
+            <p>We're creating a calm corner of the internet for makers, dreamers, and remote workers who value mindfulness, quiet, and intentional growth.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="about-card">
+            <h4>🧩 Our Values</h4>
+            <p>Respect, accessibility, eco-consciousness, and silent productivity. We believe silence isn't empty — it's full of meaning.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="about-card">
+            <h4>🌐 Our Community</h4>
+            <p>We welcome all — artisans, coders, minimalists, and quiet thinkers — to thrive without noise or pressure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="team-section container" data-aos="fade-up">
+      <h2 class="text-center mb-4">Meet the Team</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4 team-member" data-aos="fade-up" data-aos-delay="100">
+          <img src="person1.png" alt="Team Member 1" class="img-fluid">
+          <h5>Mr.Shinchan</h5>
+          <p>Founder & Vision Keeper</p>
+        </div>
+        <div class="col-md-4 team-member" data-aos="fade-up" data-aos-delay="200">
+          <img src="person2.jpeg" alt="Team Member 2" class="img-fluid">
+          <h5>Mr.Doraemon</h5>
+          <p>Design & Community</p>
+        </div>
+        <div class="col-md-4 team-member" data-aos="fade-up" data-aos-delay="300">
+          <img src="person3.jpeg" alt="Team Member 3" class="img-fluid">
+          <h5>Mr.Hattori</h5>
+          <p>Technology & Product</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="page-header">
+      <h1 data-aos="fade-down">Explore Our Unique Collections</h1>
+      <p data-aos="fade-down" data-aos-delay="100">Each item is crafted with care, intention, and love.</p>
+    </section>
+
+    <section class="shop-grid container">
+      <div class="row g-4">
+        <div class='col-sm-6 col-md-4 col-lg-3 d-flex' data-aos='fade-up'>
+          <div class='item-card w-100'>
+            <img src='bamboo-lamp.jpeg' alt='Bamboo Table Lamp'>
+            <h5>Bamboo Table Lamp</h5>
+            <p>Handwoven bamboo shade with warm light.</p>
+            <div class='price'>$12.00</div>
+          </div>
+        </div>
+        <div class='col-sm-6 col-md-4 col-lg-3 d-flex' data-aos='fade-up'>
+          <div class='item-card w-100'>
+            <img src='clay-pot.jpeg' alt='Clay Water Pot'>
+            <h5>Clay Water Pot</h5>
+            <p>Keeps water naturally cool and fresh.</p>
+            <div class='price'>$13.75</div>
+          </div>
+        </div>
+        <div class='col-sm-6 col-md-4 col-lg-3 d-flex' data-aos='fade-up'>
+          <div class='item-card w-100'>
+            <img src='jute-wall.jpg' alt='Jute Wall Hanging'>
+            <h5>Jute Wall Hanging</h5>
+            <p>Sustainable decor for earthy homes.</p>
+            <div class='price'>$15.50</div>
+          </div>
+        </div>
+        <div class='col-sm-6 col-md-4 col-lg-3 d-flex' data-aos='fade-up'>
+          <div class='item-card w-100'>
+            <img src='vase.jpeg' alt='Terracotta Vase'>
+            <h5>Terracotta Vase</h5>
+            <p>Rustic charm, perfect for dry flowers.</p>
+            <div class='price'>$17.25</div>
+          </div>
+        </div>
+        <div class='col-sm-6 col-md-4 col-lg-3 d-flex' data-aos='fade-up'>
+          <div class='item-card w-100'>
+            <img src='diary.jpeg' alt='Hand-stitched Diary'>
+            <h5>Hand-stitched Diary</h5>
+            <p>Eco-paper with fabric binding.</p>
+            <div class='price'>$19.00</div>
+          </div>
+        </div>
+        <div class='col-sm-6 col-md-4 col-lg-3 d-flex' data-aos='fade-up'>
+          <div class='item-card w-100'>
+            <img src='coconut-bowl.jpeg' alt='Coconut Shell Bowl'>
+            <h5>Coconut Shell Bowl</h5>
+            <p>Nature-inspired breakfast bowl.</p>
+            <div class='price'>$20.75</div>
+          </div>
+        </div>
+        <div class='col-sm-6 col-md-4 col-lg-3 d-flex' data-aos='fade-up'>
+          <div class='item-card w-100'>
+            <img src='coasters.jpeg' alt='Woolen Coasters Set'>
+            <h5>Woolen Coasters Set</h5>
+            <p>Soft, hand-knitted coaster set.</p>
+            <div class='price'>$22.50</div>
+          </div>
+        </div>
+        <div class='col-sm-6 col-md-4 col-lg-3 d-flex' data-aos='fade-up'>
+          <div class='item-card w-100'>
+            <img src='basket.jpeg' alt='Palm Leaf Basket'>
+            <h5>Palm Leaf Basket</h5>
+            <p>Minimal, strong, and versatile.</p>
+            <div class='price'>$24.25</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jobs Section -->
+    <section id="jobs" class="page-header">
+      <h1 data-aos="fade-down">Join Our Mission</h1>
+      <p data-aos="fade-down" data-aos-delay="100">Creative roles. Real impact. Start your journey with SilentHands.</p>
+    </section>
+
+    <section class="container job-listings">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="job-card">
+            <div class="job-title">Handicraft Photographer</div>
+            <div class="job-location">📍 Remote / Delhi</div>
+            <div class="job-desc">Capture the beauty of handcrafted items for web, print & social.</div>
+            <a href="mailto:join@silenthands.org?subject=Application: Handicraft Photographer" class="apply-btn">Apply Now</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="job-card">
+            <div class="job-title">Sustainable Materials Scout</div>
+            <div class="job-location">📍 India – Travel</div>
+            <div class="job-desc">Find and source eco-friendly materials from remote artisan regions.</div>
+            <a href="mailto:join@silenthands.org?subject=Application: Sustainable Materials Scout" class="apply-btn">Apply Now</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="job-card">
+            <div class="job-title">Cultural Content Writer</div>
+            <div class="job-location">📍 Remote</div>
+            <div class="job-desc">Tell authentic artisan stories and write for blogs, press, and outreach.</div>
+            <a href="mailto:join@silenthands.org?subject=Application: Cultural Content Writer" class="apply-btn">Apply Now</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up">
+          <div class="job-card">
+            <div class="job-title">Marketplace Coordinator</div>
+            <div class="job-location">📍 Mumbai</div>
+            <div class="job-desc">Manage product listings, stock, and customer queries across platforms.</div>
+            <a href="mailto:join@silenthands.org?subject=Application: Marketplace Coordinator" class="apply-btn">Apply Now</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="job-card">
+            <div class="job-title">UI/UX Designer</div>
+            <div class="job-location">📍 Remote / Hybrid</div>
+            <div class="job-desc">Design seamless digital experiences for craft discovery and checkout.</div>
+            <a href="mailto:join@silenthands.org?subject=Application: UI/UX Designer" class="apply-btn">Apply Now</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="job-card">
+            <div class="job-title">Packaging Design Lead</div>
+            <div class="job-location">📍 Ahmedabad</div>
+            <div class="job-desc">Create eco-friendly packaging that reflects our handmade ethos.</div>
+            <a href="mailto:join@silenthands.org?subject=Application: Packaging Design Lead" class="apply-btn">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="page-header">
+      <h1 data-aos="fade-down">Let's Connect</h1>
+      <p data-aos="fade-down" data-aos-delay="100">Have a question, idea, or feedback? We'd love to hear from you.</p>
+    </section>
+
+    <section class="container contact-form-section">
+      <div class="form-card" id="formSection" data-aos="fade-up">
+        <form id="contactForm">
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" id="name" name="Name" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" id="email" name="Email" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" id="subject" name="Subject" class="form-control" />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="Message" rows="5" class="form-control" required></textarea>
+          </div>
+          <button type="submit" class="btn-send">Send Message</button>
+        </form>
+      </div>
+
+      <div class="thank-you" id="thankYouSection" data-aos="fade-up">
+        <h2>Thank You! 🙏</h2>
+        <p>Your message has been received. We'll get back to you shortly!</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 SilentHands — Crafted with Care, Connected with Heart.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Initialize AOS animation
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+    
+    // Contact form submission
+    const form = document.getElementById('contactForm');
+    const formSection = document.getElementById('formSection');
+    const thankYou = document.getElementById('thankYouSection');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      formSection.style.display = 'none';
+      thankYou.style.display = 'block';
+      window.scrollTo({ top: document.getElementById('contact').offsetTop, behavior: 'smooth' });
+    });
+    
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

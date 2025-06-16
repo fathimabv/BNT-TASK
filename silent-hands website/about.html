@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | SilentHands</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(to right, #f6f9fc, #ddeefc);
+      color: #2e2e2e;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+        nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #1ca3b5;
+      transition: width 0.10s ease-in-out;
+    }
+
+    nav ul li a:hover {
+      color: #0396d4;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+    
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 40px;
+      width: auto;
+      margin-right: 10px;
+      border-radius: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.1);
+    }
+
+    .brand-name {
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #3498db;
+    }
+
+    .header-section {
+      text-align: center;
+      padding: 5rem 2rem 2rem;
+      background: linear-gradient(to right, #e6f7ff, #fffdf7);
+    }
+
+    .header-section h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #1c1c1c;
+    }
+
+    .header-section p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    .about-content {
+      padding: 3rem 2rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .about-card {
+      background: #fffefc;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      border-left: 5px solid #a3c4f3;
+    }
+
+    .about-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-card h4 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .about-card p {
+      color: #4f4f4f;
+      line-height: 1.6;
+    }
+
+    .team-section {
+      padding: 3rem 2rem;
+      background: #f0f6fc;
+      text-align: center;
+    }
+
+    .team-section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #2b2b2b;
+    }
+
+    .team-member {
+      margin: 1rem auto;
+      max-width: 300px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .team-member:hover {
+      transform: scale(1.07);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .team-member img {
+      width: 100%;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1rem;
+    }
+
+    .team-member h5 {
+      margin: 0.5rem 0 0.2rem;
+      font-weight: bold;
+      color: #2e4053;
+    }
+
+    .team-member p {
+      color: #555;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="brand">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <span class="brand-name"><b>SilentHands</b></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="shops.html">Shop</a></li>
+    <li><a href="jobs.html">Jobs</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="header-section" data-aos="fade-up">
+  <h1>About Us</h1>
+  <p>SilentHands is your sanctuary for peaceful creation and mindful commerce.</p>
+</section>
+
+<section class="about-content container">
+  <div class="card-grid">
+    <div class="about-card" data-aos="fade-up">
+      <h4>🎯 Our Purpose</h4>
+      <p>We’re creating a calm corner of the internet for makers, dreamers, and remote workers who value mindfulness, quiet, and intentional growth.</p>
+    </div>
+    <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+      <h4>🧩 Our Values</h4>
+      <p>Respect, accessibility, eco-consciousness, and silent productivity. We believe silence isn’t empty — it’s full of meaning.</p>
+    </div>
+    <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+      <h4>🌐 Our Community</h4>
+      <p>We welcome all — artisans, coders, minimalists, and quiet thinkers — to thrive without noise or pressure.</p>
+    </div>
+  </div>
+</section>
+
+<section class="team-section" data-aos="fade-up">
+  <h2>Meet the Team</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-4 team-member" data-aos="fade-up" data-aos-delay="100">
+      <img src="person1.png" alt="Team Member 1">
+      <h5>Mr.Shinchan</h5>
+      <p>Founder & Vision Keeper</p>
+    </div>
+    <div class="col-md-4 team-member" data-aos="fade-up" data-aos-delay="200">
+      <img src="person2.jpeg" alt="Team Member 2">
+      <h5>Mr.Doraemon</h5>
+      <p>Design & Community</p>
+    </div>
+    <div class="col-md-4 team-member" data-aos="fade-up" data-aos-delay="300">
+      <img src="person3.jpeg" alt="Team Member 3">
+      <h5>Mr.Hattori</h5>
+      <p>Technology & Product</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 SilentHands — Designed for Calm, Created with Care.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!-- ✅ Placeholder for index.html -->
+<!-- I will generate index.html first with innovative modern styling, and follow with others like home.html, shops.html, etc. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SilentHands | A Calm Digital World</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(to right, #fefcea, #f1da36);
+      color: #333;
+    }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #0077cc;
+}
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #f9a825;
+      transition: width 0.3s ease-in-out;
+    }
+
+    nav ul li a:hover {
+      color: #f9a825;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%; }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #ffd194 0%, #70e1f5 100%);
+    }
+    .hero-text {
+      max-width: 600px;
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero-text h1 {
+     opacity: 1;
+     transform: scale(1);
+     transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .hero-text h1.fade-out {
+     opacity: 0;
+     transform: scale(0.8);
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+    }
+    .hero-img img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .hero-img img:hover {
+    transform: scale(1.1);
+    }
+
+    .sections {
+      padding: 4rem 2rem;
+    }
+
+    .section-box {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .section-box:hover {
+      transform: translateY(-10px);
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="brand">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <span class="brand-name"><b>SilentHands</b></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="shops.html">Shop</a></li>
+    <li><a href="jobs.html">Jobs</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+  <section class="hero">
+    <div class="hero-text" data-aos="fade-right">
+      <h1>Welcome to SilentHands</h1></div>
+
+      <p>A peaceful platform for handmade goods & silent job seekers.</p>
+    </div>
+    <div class="hero-img" data-aos="fade-left">
+      <img src="heroimg.jpeg" alt="Hero Image">
+    </div>
+  </section>
+
+  <section class="sections container">
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="section-box">
+          <i class="fas fa-store fa-2x mb-3"></i>
+          <h4>Explore Shop</h4>
+          <p>Discover eco-friendly and artisan-made products.</p>
+          <a href="shops.html">Visit Shop</a>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="section-box">
+          <i class="fas fa-briefcase fa-2x mb-3"></i>
+          <h4>Silent Jobs</h4>
+          <p>Remote, silent jobs for calm minds and makers.</p>
+          <a href="jobs.html">See Jobs</a>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="section-box">
+          <i class="fas fa-envelope fa-2x mb-3"></i>
+          <h4>Contact Us</h4>
+          <p>Have a question or want to join? Get in touch!</p>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 SilentHands. Calm Work, Beautiful Creations.
+  </footer>
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
