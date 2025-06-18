@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Placed</title>
+    <link rel="icon" href="./logo.png" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #f3e5ff 0%, #e1c6ff 100%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .thank-you {
+        text-align: center;
+        background: linear-gradient(to right, #6a0dad38, #892be245);
+        border-radius: 20px;
+        width: 60%;
+        padding: 2rem;
+        margin: auto;
+        animation: fadeInUp 0.8s ease-out, pulse 2s infinite 1s;
+        transform-origin: center;
+      }
+
+      .thank-you h2 {
+        font-size: 35px;
+        font-weight: 600;
+        color: black;
+        animation: textFocusIn 0.8s ease-out;
+      }
+
+      .thank-you p {
+        font-size: 20px;
+        margin-top: 1rem;
+        color: #3a3a3a;
+        animation: fadeIn 1.5s ease-out;
+      }
+
+      .thank-you::before {
+        content: "✓";
+        display: block;
+        font-size: 4rem;
+        color: #4caf50;
+        margin-bottom: 1rem;
+        animation: checkmark 0.5s ease-out;
+      }
+
+      footer {
+        background: #a95aad98;
+        color: white;
+        padding: 1.5rem;
+        text-align: center;
+        margin-top: auto;
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        50% {
+          transform: scale(1.02);
+          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        100% {
+          transform: scale(1);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      @keyframes textFocusIn {
+        from {
+          letter-spacing: -0.5em;
+          filter: blur(12px);
+          opacity: 0;
+        }
+        to {
+          filter: blur(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes checkmark {
+        0% {
+          transform: scale(0);
+          opacity: 0;
+        }
+        80% {
+          transform: scale(1.2);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="thank-you" id="thankYouSection" data-aos="fade-up">
+      <h2>Order Placed Successfully!</h2>
+      <p>Your message has been received. We'll get back to you shortly!</p>
+    </div>
+
+    <footer>
+      <b>&copy; 2025 SilentHands — Designed for Calm, Created with Care.</b>
+    </footer>
+  </body>
+</html>

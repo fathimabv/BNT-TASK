@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SilentHands | Home</title>
+  <link rel="icon" href="./logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous" defer></script>
+ 
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-image: url('background3.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .navbar {
+      background-color: rgba(70, 50, 90, 0.85);
+    }
+
+    .navbar-brand img {
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .navbar-brand img:hover {
+      transform: rotate(8deg) scale(1.1);
+    }
+
+    .nav-link {
+      color: #f3e8ff !important;
+      position: relative;
+      font-weight: 500;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: -3px;
+      background-color: #cba0e3;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #dda0dd !important;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(to right, rgba(40, 20, 60, 0.5), rgba(20, 10, 40, 0.5));
+      color: #f3e8ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      padding: 4rem 2rem;
+    }
+
+    .section-box {
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .section-box:hover {
+      transform: scale(1.05);
+      opacity: 0.95;
+    }
+
+    .hover-zoom {
+      transition: all 0.4s ease-in-out;
+    }
+
+    .hover-zoom:hover {
+      transform: scale(1.08);
+      opacity: 0.9;
+    }
+
+    .hero-img {
+      max-width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.5s ease, opacity 0.4s ease;
+    }
+
+    .hero-img:hover {
+      transform: scale(1.08);
+      opacity: 0.95;
+    }
+
+.box{
+            padding: 20px;
+            border-color: black;
+            width: 400px;
+        }
+.borderbox{
+        background-color: transparent; 
+        margin-left: 800px;
+        margin-top: -450px;
+     }
+
+.box{
+            padding: 20px;
+            border-color: black;
+            width: 400px;
+        }
+.borderbox{
+        background-color: transparent; 
+        margin-left: 800px;
+        margin-top: -350px;
+     }
+
+    footer {
+      background-color: rgba(210, 166, 223, 0.85);
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    .footer-form input,
+    .footer-form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      background-color: transparent;
+      border: 1px solid black;
+      color: black;
+    }
+
+    #submit {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: rgb(6, 6, 6);
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 900px) {
+      textarea {
+        font-size: 0.6rem;
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="logo.png" alt="Logo">
+        <span class="fw-bold fs-4 text-light">SilentHands</span>
+      </a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="jobs.html">Jobs</a></li>
+          <li class="nav-item"><a class="nav-link" href="creative.html">Creatives</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Quote Carousel Start -->
+<div id="quoteCarousel" class="carousel slide text-white mb-4" data-bs-ride="carousel" data-bs-interval="4000">
+  <div class="carousel-inner text-center py-4" style="background-color: rgba(30, 20, 50, 0.85);">
+    <div class="carousel-item active">
+      <h4>"Peace is not the absence of noise, but the presence of calm."</h4>
+      <p class="fst-italic">– Unknown</p>
+    </div>
+    <div class="carousel-item">
+      <h4>"In silence, we discover our true voice."</h4>
+      <p class="fst-italic">– Rumi</p>
+    </div>
+    <div class="carousel-item">
+      <h4>"Handmade is heart-made."</h4>
+      <p class="fst-italic">– Anonymous</p>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#quoteCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#quoteCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+
+  <section class="hero">
+    <div class="container1">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <h1 class="display-4 fw-bold hover-zoom">Welcome to SilentHands</h1>
+          <p class="lead mt-3">Discover peace-driven products, find quiet jobs, and be part of a serene community focused on mindful creation.</p>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="heroimg.jpeg" alt="Hero Image" class="img-fluid hero-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container py-5">
+    <div class="section-box mb-4" id="about">
+      <h2 class="text-center mb-3">What We Do</h2>
+      <p>
+        At SilentHands, we empower individuals who seek peaceful, meaningful work and celebrate handmade craftsmanship.<br><br>
+        Whether you're a job seeker looking for calm, remote opportunities or a maker showcasing unique handmade products,
+        we provide the perfect platform to connect, grow, and thrive in a distraction-free environment.
+      </p>
+    </div>
+
+    <div class="section-box mb-4">
+      <h2 class="text-center mb-3">Our Mission</h2>
+      <ul class="list-unstyled">
+        <li><i class="fas fa-heart text-danger me-2"></i>Create a peaceful platform for calm, focused work.</li>
+        <li><i class="fas fa-heart text-danger me-2"></i>Support and promote handmade, heart-crafted products.</li>
+        <li><i class="fas fa-heart text-danger me-2"></i>Connect remote job seekers with silent, distraction-free roles.</li>
+        <li><i class="fas fa-heart text-danger me-2"></i>Encourage a stress-free, meaningful work environment.</li>
+        <li><i class="fas fa-heart text-danger me-2"></i>Build a supportive community of makers and doers.</li>
+        <li><i class="fas fa-heart text-danger me-2"></i>Empower individuals to grow through passion and purpose.</li>
+      </ul>
+    </div>
+
+    <div class="row g-4 mt-4">
+      <div class="col-md-4">
+        <div class="p-4 section-box text-center" id="shop">
+          <i class="fas fa-store fa-2x mb-3 text-primary"></i>
+          <h4>Explore Shop</h4>
+          <p>Discover eco-friendly and artisan-made products.</p>
+          <a href="#" class="btn btn-outline-primary">Visit Shop</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 section-box text-center" id="jobs">
+          <i class="fas fa-briefcase fa-2x mb-3 text-success"></i>
+          <h4>Silent Jobs</h4>
+          <p>Remote, silent jobs for calm minds and makers.</p>
+          <a href="#" class="btn btn-outline-success">See Jobs</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 section-box text-center" id="contact">
+          <i class="fas fa-envelope fa-2x mb-3 text-warning"></i>
+          <h4>Contact Us</h4>
+          <p>Have a question or want to join? Get in touch!</p>
+          <a href="#" class="btn btn-outline-warning">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<footer class="mt-5 py-4 text-dark" style="background-color: rgba(210, 166, 223, 0.85);">
+  <div class="container">
+    <div class="row">
+      <!-- Contact Info -->
+      <div class="col-md-6 mb-4">
+        <h4 class="fw-bold">CONTACT US</h4>
+        <p><strong>Address:</strong> 500 Terry Francine Street, San Francisco, CA 94158</p>
+        <p><strong>Tel:</strong> 123-456-7890</p>
+        <p><strong>Fax:</strong> 123-456-7890</p>
+        <p><strong>Email:</strong> silenthand@gmail.com</p>
+        <div class="mt-3">
+          <a href="#" class="me-3 text-dark"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="#" class="me-3 text-dark"><i class="fab fa-twitter fa-lg"></i></a>
+          <a href="#" class="me-3 text-dark"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="#" class="text-dark"><i class="fab fa-youtube fa-lg"></i></a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <div class="p-4 rounded shadow-sm" style="background-color: rgba(255, 255, 255, 0.6);">
+          <h4 class="fw-bold text-center mb-3">Any Queries?</h4>
+          <p class="text-center mb-4">Drop them below 👇</p>
+          <form>
+            <div class="mb-2">
+              <label for="fname" class="form-label">First Name*</label>
+              <input type="text" class="form-control" id="fname" required>
+            </div>
+            <div class="mb-2">
+              <label for="email" class="form-label">Email*</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-2">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" class="form-control" id="subject">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Type your message here..."></textarea>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-dark">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <hr class="mt-5">
+    <p class="text-center mb-0">&copy; 2035 by Personal Life Coach. Powered and secured by <u>SILENT HAND</u></p>
+  </div>
+</footer>
+</body>
+</html>

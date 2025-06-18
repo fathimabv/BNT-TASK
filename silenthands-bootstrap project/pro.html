@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACCESSORIES</title>
+    <link rel="icon" href="./logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .navbar {
+      background-color: rgba(70, 50, 90, 0.85);
+    }
+
+    .navbar-brand img {
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .navbar-brand img:hover {
+      transform: rotate(8deg) scale(1.1);
+    }
+
+    .nav-link {
+      color: #f3e8ff !important;
+      position: relative;
+      font-weight: 500;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: -3px;
+      background-color: #cba0e3;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #dda0dd !important;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }    
+    body{
+       background-color: #ffffff;
+    }
+.btn{
+    border: 1px solid black;
+    background: #ce9fe9;
+}
+.card{
+  /* overflow: hidden; */
+  transition: all 0.5s ease;
+  
+  width: 300px ;
+  left: 50px;
+  animation: slideUp 0.8s ease forwards;
+  opacity: 0; 
+}
+.card img {
+  height: 300px;         
+  object-fit: cover;     
+  border-radius: 8px; 
+  justify-content: center; 
+}
+.hover:hover {
+   transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 20px rgba(175, 65, 166, 0.5);
+  border-color: #cf34da;
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.card1{
+  background:   #d266cb;          
+  border-radius: 12px;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 18px purple;
+  text-align: center;
+}
+
+.dropdown-menu{
+  background-color: #f6f6f6;
+}
+.dropdown-menu a:hover{
+  background-color: rgb(226, 147, 226) ;
+}
+.box{
+            padding: 20px;
+            border-color: black;
+            width: 400px;
+        }
+.borderbox{
+        background-color: transparent; 
+        margin-left: 800px;
+        margin-top: -350px;
+     }
+
+    footer {
+      background: #a95aad98;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+</style>
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="logo.png" alt="Logo" class="logo">
+      <span class="fw-bold fs-5 text-white">SilentHands</span>
+    </a>
+    <ul class="navbar-nav ms-auto d-flex flex-row gap-3">
+      <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+      <li class="nav-item"><a class="nav-link" href="jobs.html">Jobs</a></li>
+      <li class="nav-item"><a class="nav-link" href="creative.html">Creatives</a></li>
+    </ul>
+  </div>
+</nav>
+</header>
+<div class="dropdown mt-3">
+      <button class="btn" type="button" data-bs-toggle="dropdown">
+        BUY HERE
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="pro.html">ACCESSORIES</a></li>
+        <li><a class="dropdown-item" href="woolen clothes.html">WOOLEN CLOTHES</a></li>
+        <li><a class="dropdown-item" href="wooden.html">WOODEN DECORATION</a></li>
+      </ul>
+    </div>
+    <div class="cotainer px-5 py-4 ">
+      <div class="card1">
+        <div class="card-body">
+          <h1 class="text-center card-body text-purple">ACCESSORIES</h1>
+        </div>
+      </div>
+    <div class="row" >
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4- mt-2 mb-3">
+            <div class="card ">
+              <div class="hover">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpRFDjcaNldgua0D-qF_Bc8nSbdxVTAsYXw26fNHpuAoKUVRaIvqOjUdLOgfjRcWic7u8&usqp=CAU" class="img-fluid rounded">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Earring</h5>
+            <div class="mt-auto">
+              <span class="h5">Rs.40</span>
+              <button class="btn btn-custom float-end"><a href='buynow.html'>Buy</a></button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mt-2 justify-content-center">
+            <div class="card">
+              <div class="hover">
+                <img src="https://craftzone.in/backend/uploads/products/SKU0000000949/fa3068cdb728636fddadd40862a9a242.webp" class="img-fluid rounded">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Jewel set</h5>
+            <div class="mt-auto">
+              <span class="h5">Rs.100</span>
+              <button class="btn btn-custom float-end"><a href='buynow.html'>Buy</a></button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mt-2">
+            <div class="card">
+              <div class="hover">
+                <img src="https://craftzone.in/backend/uploads/products/SKU0000000954/ec5333cfb5adba94f8a550457eb941d4.webp" class="img-fluid rounded">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Jewel set</h5>
+            <div class="mt-auto">
+              <span class="h5">Rs.190</span>
+              <button class="btn btn-custom float-end"><a href='buynow.html'>Buy</a></button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6  col-md-4 col-lg-4 mt-2">
+            <div class="card">
+              <div class="hover">
+                <img src="https://www.akshahandmadejewelry.com/cdn/shop/files/IMG_0995-scaled.jpg?v=1722947567&width=1600" class="img-fluid rounded">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Jewel set</h5>
+            <div class="mt-auto">
+              <span class="h5">Rs.250</span>
+              <button class="btn btn-custom float-end"><a href='buynow.html'>Buy</a></button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mt-2">
+            <div class="card">
+              <div class="hover">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT73QSzFVNTD2-gntsxt-Xu9gUx7IUS20N7-w&s" class="img-fluid rounded">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Earring</h5>
+            <div class="mt-auto">
+              <span class="h5">Rs.40</span>
+              <button class="btn btn-custom float-end"><a href='buynow.html'>Buy</a></button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 mt-2">
+            <div class="card">
+              <div class="hover">
+                <img src="https://m.media-amazon.com/images/I/71RyJ6INR1L._AC_UY1100_.jpg" class="img-fluid rounded">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Jewel set</h5>
+            <div class="mt-auto">
+              <span class="h5">Rs.100</span>
+              <button class="btn btn-custom float-end"><a href='buynow.html'>Buy</a></button>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer><b>
+  &copy; 2025 SilentHands — Designed for Calm, Created with Care.</b>
+</footer>
+</body>
+</html>
