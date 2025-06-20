@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>parseInt, parsedFloat</title>
+  </head>
+  <body>
+    <script>
+      let intString = "42";
+      let floatString = "3.14159";
+      let mixedString = "100px";
+
+      let parsedInt = parseInt(intString); 
+      let parsedIntFromMixed = parseInt(mixedString); 
+
+      let parsedFloat = parseFloat(floatString); 
+      let parsedFloatFromMixed = parseFloat(mixedString); 
+
+      console.log("parseInt('" + intString + "') = " + parsedInt);
+      console.log("parseInt('" + mixedString + "') = " + parsedIntFromMixed);
+      console.log("parseFloat('" + floatString + "') = " + parsedFloat);
+      console.log("parseFloat('" + mixedString + "') = " + parsedFloatFromMixed);
+    </script>
+  </body>
+</html>

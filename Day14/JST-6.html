@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dot Operator</title>
+</head>
+<body>
+
+<h2 id="nameDisplay"></h2>
+<h3 id="cityDisplay"></h3>
+<p id="fullNameDisplay"></p>
+
+<script>
+const person = {
+    firstName: "Alice",
+    lastName: "Johnson",
+    address: { city: "New York"}, fullName: function() {
+        return this.firstName + " " + this.lastName;
+    } };
+
+document.getElementById("nameDisplay").innerText = "First Name: " + person.firstName;
+document.getElementById("cityDisplay").innerText = "City: " + person.address.city;
+document.getElementById("fullNameDisplay").innerText = "Full Name: " + person.fullName();
+</script>
+</body>
+</html>

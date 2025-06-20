@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fruit Switch</title>
+</head>
+<body>
+
+<h2>Choose a fruit:</h2>
+<select id="fruitSelect" onchange="showFruitInfo()">
+    <option value="">Select here</option>
+    <option value="apple">Apple</option>
+    <option value="banana">Banana</option>
+    <option value="orange">Orange</option>
+    <option value="mango">Mango</option>
+</select>
+
+<p id="info"></p>
+
+<script>
+function showFruitInfo() {
+    let fruit = document.getElementById("fruitSelect").value;
+    let message = "";
+
+    switch (fruit) {
+        case "apple":
+            message = "Apples are red or green and good for your health.";
+            break;
+        case "banana":
+            message = "Bananas are yellow and rich in potassium.";
+            break;
+        case "orange":
+            message = "Oranges are juicy and high in vitamin C.";
+            break;
+        case "mango":
+            message = "Mangoes are sweet and called the king of fruits.";
+            break;
+        default:
+            message = "Please select a fruit.";
+    }
+    document.getElementById("info").innerText = message;
+}
+</script>
+</body>
+</html>

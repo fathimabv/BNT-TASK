@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typecasting</title>
+</head>
+<body>
+    <script>
+let num = 10;
+let str = "5";
+let result = num + str;  
+console.log("10 + '5' = " + result); 
+
+let str1 = "123";
+let str2 = "3.14";
+let str3 = "abc";
+
+let intVal = Number(str1);     
+let floatVal = parseFloat(str2); 
+let nanVal = Number(str3);    
+
+console.log("Number('123') =", intVal);
+console.log("parseFloat('3.14') =", floatVal);
+console.log("Number('abc') =", nanVal);
+
+let num1 = 50;
+let strVal = String(num1);
+console.log("String(50) =", strVal);
+
+console.log("Boolean(0) =", Boolean(0));      
+console.log("Boolean('hello') =", Boolean("hello")); 
+</script>
+</body>
+</html>
