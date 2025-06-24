@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery add remove toggle</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .highlight {
+      background-color: rgba(213, 28, 130, 0.676);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>add, remove, toggle</h2>
+  <div id="box">This is a box</div><br>
+
+  <button id="addBtn">Add Class</button>
+  <button id="removeBtn">Remove Class</button>
+  <button id="toggleBtn">Toggle Class</button>
+
+  <script>
+    $(document).ready(function () {
+      
+      $('#addBtn').click(function () {
+        $('#box').addClass('highlight');
+      });
+
+      $('#removeBtn').click(function () {
+        $('#box').removeClass('highlight');
+      });
+
+      $('#toggleBtn').click(function () {
+        $('#box').toggleClass('highlight');
+      });
+
+    });
+  </script>
+</body>
+</html>
