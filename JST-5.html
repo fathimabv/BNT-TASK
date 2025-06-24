@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Form</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <h2>Get Set Form</h2>
+  <input type="text" id="nameInput" placeholder="Enter your name" />
+  <br><br>
+  <input type="number" id="ageInput" placeholder="Enter your age" />
+  <br><br>
+
+  <button id="getValues">Get Values</button>
+  <button id="setValues">Set Default Values</button>
+
+  <script>
+    $(document).ready(function () {
+
+      $('#getValues').click(function () {
+        let name = $('#nameInput').val();
+        let age = $('#ageInput').val();
+        alert("Name: " + name + ", Age: " + age);
+      });
+
+      $('#setValues').click(function () {
+        $('#nameInput').val("Fathima");
+        $('#ageInput').val(20);
+      });
+
+    });
+  </script>
+</body>
+</html>
