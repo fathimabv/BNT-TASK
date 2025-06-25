@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Navbar Emoji Toggle</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body.light-theme {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    body.dark-theme {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    .toggle-container {
+      width: 60px;
+      height: 30px;
+      background-color: #444;
+      border-radius: 50px;
+      padding: 3px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      position: relative;
+      transition: background-color 0.3s;
+    }
+
+    .emoji-toggle {
+      width: 24px;
+      height: 24px;
+      background-color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      position: absolute;
+      left: 3px;
+      transition: transform 0.3s ease;
+    }
+
+    body.dark-theme .emoji-toggle {
+      transform: translateX(30px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔵 Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+    <a class="navbar-brand" href="#">MySite</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+      </ul>
+      <!-- 🔆 Theme Toggle in Navbar -->
+      <div class="toggle-container" onclick="toggleTheme()">
+        <div id="emojiToggle" class="emoji-toggle">🌞</div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5 text-center">
+    <h1>Hello, Theme World! 🌍</h1>
+    <p>This is a page with navbar emoji toggle.</p>
+  </div>
+
+  <script>
+    const emojiToggle = document.getElementById('emojiToggle');
+    const body = document.body;
+
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        body.classList.remove('light-theme');
+        body.classList.add('dark-theme');
+        emojiToggle.textContent = '🦁';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.remove('dark-theme');
+        body.classList.add('light-theme');
+        emojiToggle.textContent = '🌞';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    function toggleTheme() {
+      const currentTheme = body.classList.contains('dark-theme') ? 'dark' : 'light';
+      setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    }
+
+    // Load saved theme on page load
+    window.onload = () => {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      setTheme(savedTheme);
+    };
+  </script>
+
+</body>
+</html>
