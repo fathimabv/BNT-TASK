@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Javascript codes</title>
+  </head>
+  <body>
+    <h2>|Reverse<br>|Palindrome<br>|Larg No. Array<Br>|No.Vowels<br>|Factorial<br>|Prime Nos<br>|Remove duplicates<br>|Sum.Array redunce()<br>|Fibonacci Sequence<br>|First Non repeating char in str </h2>
+    <script>
+      //Reverse
+      let str = "Fathima Beevi";
+      let reversed = str.split("").reverse("").join("");
+      console.log(reversed);
+
+      // palindrome
+      let str1 = "racecar";
+      let reversed1 = str1.split("").reverse("").join("");
+      if (str1 === reversed1) {
+        console.log("yeahhhh, It's a Palindrome");
+      } else {
+        console.log("Not a palindrome");
+      }
+
+      //largest numbersin a Array
+      let num = [10, 12, 25, 57, 24];
+      let check = num[0];
+      for (let i = 1; i < num.length; i++) {
+        if (num[i] > check) {
+          check = num[i];
+        }
+      }
+      console.log(check);
+
+      //   count number of vowels
+      let arr = "The quick brown fox jumps over the lazy dog";
+      let count = 0;
+      for (let word of arr) {
+        for (let char of word) {
+          if ("aeiouAEIOU".includes(char)) {
+            count++;
+          }
+        }
+      }
+      console.log("Total number of vowels:", count);
+
+      // factorial
+      let number = 5;
+      let fact = 1;
+      for (let i = 1; i <= number; i++) {
+        fact = fact * i;
+      }
+      console.log("Factorial of", number, "is", fact);
+
+      // Prime Number
+      let num1 = 7;
+      let prime = true;
+      for (let i = 2; i < num1; i++) {
+        if (num1 % i === 0) {
+          prime = false;
+          break;
+        }
+      }
+      if (num1 <= 1) {
+        prime = false;
+      }
+      if (prime) {
+        console.log(num1 + " is Prime");
+      } else {
+        console.log(num1 + " is Not Prime");
+      }
+
+      // remove duplicates on array
+      let arr1 = [1, 2, 2, 3, 4, 4, 5, 5, 6];
+      let unique = [...new Set(arr1)];
+      console.log(unique);
+
+      // sum of array elements using reduce()
+      let arr2 = [1, 2, 3, 4, 5, 5];
+      let sum = arr2.reduce((total, num) => total + num, 0);
+      console.log(sum);
+
+      // fibonacci sequence
+      let n = 10;
+      let a = 0,
+        b = 1;
+      console.log("Fibonacci Sequence:");
+      for (let i = 0; i < n; i++) {
+        console.log(a);
+        let next = a + b;
+        a = b;
+        b = next;
+      }
+
+      // first non repeating character in a string
+      let str2 = "character";
+      let result = null;
+      for (let ch of str2) {
+        if (str2.indexOf(ch) === str2.lastIndexOf(ch)) {
+          result = ch;
+          break;
+        }
+      }
+      console.log(
+        result
+          ? "First non-repeating character: " + result
+          : "No non-repeating character found."
+      );
+    </script>
+  </body>
+</html>
