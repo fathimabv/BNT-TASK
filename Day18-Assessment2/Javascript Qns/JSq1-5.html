@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Javascript Questions</title>
+</head>
+<body>
+<h3>Javascript Questions</h3>
+<pre>
+  1.Most Repeating character
+  2.Unique elements
+  3.Longest word
+  4.Chainable function()
+  5.Hoisting
+</pre>
+<script>
+// 1.Most Repeating character
+let str = "aabbbcc";
+let maxCount = 0;
+let result1 = null;
+for (let ch of str) {
+  let count = str.split(ch).length - 1;
+  if (count > maxCount) {
+    maxCount = count;
+    result1 = ch;
+  }
+}
+console.log(
+  result1
+    ? "Most repeating character: " + result1
+    : "No repeating characters found."
+);
+
+// 2.Unique elements
+let arr1 = [1, 2, 3];
+let arr2 = [2, 4, 5];
+let combined = [...arr1, ...arr2];
+let unique = combined.filter(item =>
+  !(arr1.includes(item) && arr2.includes(item))
+);
+console.log(unique);
+
+// 3.longest word
+function findLongestWord(sentence) {
+  let words = sentence.split(" ");
+  let longest = "";
+  for (let word of words) {
+    if (word.length > longest.length) {
+      longest = word;
+    }
+  }
+  return longest;
+}
+let input = "JavaScript is powerful";
+let result2 = findLongestWord(input);
+console.log("Longest word:", result2);
+
+// 4.chainable function
+function chain(value) {
+  return {
+    add(num) {
+      value += num;
+      return this;
+    },
+    subtract(num) {
+      value -= num;
+      return this;
+    },
+    result() {
+      return value;
+    }
+  };
+}
+let output = chain(5).add(2).subtract(1).result();
+console.log("Result:", output);  
+
+// Hoisting
+
+    // 1. var Hoisting
+    console.log("var x:", a); 
+    var a = 10;
+
+    // 2. let/const Hoisting
+    try {
+      console.log("let y:", b); 
+    } catch (e) {
+      console.log("let y:", e.message);
+    }
+    let y = 20;
+    try {
+      console.log("const z:", c); 
+    } catch (e) {
+      console.log("const z:", e.message);
+    }
+    const z = 30;
+
+
+    // 3. Function Declaration Hoisting
+    Hello();
+    function Hello() {
+      console.log("Hello from function declaration!");
+    }
+
+    // 4. Function Expression Hoisting
+    try {
+      Hi();
+    } catch (e) {
+      console.log("Hi:", e.message);}
+    var Hi = function() {
+      console.log("Hi from function expression!");
+    };
+
+    // 5. Use after declaration works
+    Hi();
+
+</script>
+</body>
+</html>

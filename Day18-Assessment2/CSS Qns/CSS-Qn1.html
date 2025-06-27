@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Units</title>
+  <style>
+    html {
+      font-size: 16px;
+    }
+    body {
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    .box {
+      border: 2px solid #333;
+      background-color: #fff;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .px-box {
+      font-size: 20px;
+      width: 200px;
+    }
+    /* .em-box {
+      font-size: 1.5em; 
+      width: 20em;       
+    } */
+    .rem-box {
+      font-size: 1.5rem; 
+      width: 20rem;      
+    }
+    .percent-box {
+      font-size: 150%;   
+      width: 50%;        
+    }
+  </style>
+</head>
+<body>
+
+  <h2>CSS Units: em, rem, px, %</h2>
+  <p>In CSS, units like <code>em</code>, <code>rem</code>, <code>px</code>, and <code>%</code> are used to control font size, spacing, and Layouts.Example </p>
+  <div class="box px-box">
+    <strong>PX (Pixels):</strong><br>
+    Font size is <code>20px</code> (fixed size).<br>
+    Width is <code>200px</code> — does not change with parent or screen.
+  </div>
+  <div class="box em-box" style="font-size: 16px;">
+    <!-- <div class="em-box"> -->
+      <strong>EM:</strong><br>
+      Font size is <code>1.5em</code> = 1.5 × 16px = <code>24px</code>.<br>
+      Width is <code>20em</code> = 20 × 24px = ~480px.
+    <!-- </div> -->
+  </div>
+  <div class="box rem-box">
+    <strong>REM:</strong><br>
+    Font size is <code>1.5rem</code> = 1.5 × root 16px = <code>24px</code>.<br>
+    Width is <code>20rem</code> = 20 × 16px = <code>320px</code>.
+  </div>
+  <div class="box percent-box">
+    <strong>% (Percentage):</strong><br>
+    Font size is <code>150%</code> of the parent (16px × 1.5 = 24px).<br>
+    Width is <code>50%</code> of the parent container.
+  </div>
+</body>
+</html>
